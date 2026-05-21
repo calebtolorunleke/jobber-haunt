@@ -57,25 +57,8 @@ Smooth animations with Framer Motion
 Filter by job status instantly
 Real-time list updates
 Zero backend required
+<img width="1445" height="1290" alt="Image 2026-05-21 at 1 52 PM" src="https://github.com/user-attachments/assets/abc5aa3f-ed53-406f-8abf-3999b8d5d79c" />
 
-🏗 Architecture Overview
-src/
- ├── components/
- │    ├── ui/
- │    ├── forms/
- │    ├── landing/
- ├── context/
- │    └── JobContext.jsx
- ├── hooks/
- │    └── useJob.js
- ├── pages/
- │    ├── Dashboard.jsx
- │    ├── Jobs.jsx
- │    ├── Analytics.jsx
- │    ├── Settings.jsx
- ├── layout/
- ├── routes/
- └── App.jsx
  
 🧠 State Management Flow
 Global state handled via JobContext
