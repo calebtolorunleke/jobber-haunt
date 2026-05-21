@@ -89,7 +89,7 @@ Jobs Pipeline
 Analytics Page
 
 🚀 Getting Started
-git clone https://github.com/calebtolorunleke/jobberhaunt.git
+git clone https://github.com/calebtolorunleke/jobber-haunt
 cd jobberhaunt
 npm install
 npm run dev
