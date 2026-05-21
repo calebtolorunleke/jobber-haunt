@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const JobForm = ({ onAddJob }) => {
   const [formData, setFormData] = useState({
@@ -10,10 +11,10 @@ const JobForm = ({ onAddJob }) => {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -37,17 +38,21 @@ const JobForm = ({ onAddJob }) => {
   };
 
   return (
-    <form
+    <motion.form
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
       onSubmit={handleSubmit}
-      className="bg-white/70 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-sm space-y-4"
+      className="bg-white/70 backdrop-blur-xl border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6"
     >
       {/* HEADER */}
       <div>
-        <h2 className="text-xl font-semibold text-gray-800">
-          Add New Job
+        <h2 className="text-xl font-semibold text-gray-900">
+          Add a new application
         </h2>
-        <p className="text-sm text-gray-500">
-          Track your application in your pipeline
+
+        <p className="text-sm text-gray-500 mt-1">
+          Capture a job and track it through your pipeline
         </p>
       </div>
 
@@ -61,17 +66,19 @@ const JobForm = ({ onAddJob }) => {
           placeholder="Company name"
           value={formData.company}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white/60
+          focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
         />
 
         {/* ROLE */}
         <input
           type="text"
           name="role"
-          placeholder="Role (e.g Frontend Developer)"
+          placeholder="Role title (e.g. Frontend Engineer)"
           value={formData.role}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white/60
+          focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
         />
 
         {/* STATUS */}
@@ -79,7 +86,8 @@ const JobForm = ({ onAddJob }) => {
           name="status"
           value={formData.status}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white/60
+          focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
         >
           <option>Applied</option>
           <option>Interview</option>
@@ -91,31 +99,42 @@ const JobForm = ({ onAddJob }) => {
         <input
           type="text"
           name="link"
-          placeholder="Job link (optional)"
+          placeholder="Job URL (optional)"
           value={formData.link}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white/60
+          focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
         />
       </div>
 
       {/* NOTES */}
       <textarea
         name="notes"
-        placeholder="Notes (optional)"
+        placeholder="Add notes about this role..."
         value={formData.notes}
         onChange={handleChange}
-        rows="3"
-        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        rows="4"
+        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white/60
+        focus:outline-none focus:ring-2 focus:ring-indigo-400 transition resize-none"
       />
 
-      {/* SUBMIT BUTTON */}
-      <button
-        type="submit"
-        className="w-full md:w-auto px-6 py-3 bg-indigo-500 text-white rounded-xl font-medium hover:bg-indigo-600 transition-all shadow-md"
-      >
-        ➕ Add Job
-      </button>
-    </form>
+      {/* ACTION BAR */}
+      <div className="flex items-center justify-between pt-2">
+
+        <p className="text-xs text-gray-400">
+          Tip: Keep notes short and actionable
+        </p>
+
+        <button
+          type="submit"
+          className="px-5 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600
+          text-white font-medium shadow-md hover:scale-[1.02] transition"
+        >
+          + Add Application
+        </button>
+
+      </div>
+    </motion.form>
   );
 };
 
