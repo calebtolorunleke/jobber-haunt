@@ -7,12 +7,9 @@ const Settings = () => {
 
   return (
     <div className="space-y-8">
-
       {/* HEADER */}
       <div>
-        <h1 className="text-2xl font-bold text-gray-800">
-          Settings
-        </h1>
+        <h1 className="text-2xl font-bold text-gray-800">Settings</h1>
         <p className="text-sm text-gray-500">
           Manage your preferences and application behavior
         </p>
@@ -20,34 +17,23 @@ const Settings = () => {
 
       {/* PROFILE CARD */}
       <div className="bg-white/70 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-sm">
-
-        <h2 className="text-lg font-semibold text-gray-800 mb-4">
-          Profile
-        </h2>
+        <h2 className="text-lg font-semibold text-gray-800 mb-4">Profile</h2>
 
         <div className="flex items-center gap-4">
-
           <div className="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center text-xl font-bold shadow-md">
             J
           </div>
 
           <div>
             <p className="font-semibold text-gray-800">Jobber User</p>
-            <p className="text-sm text-gray-500">
-              jobseeker@portfolio.app
-            </p>
+            <p className="text-sm text-gray-500">jobseeker@portfolio.app</p>
           </div>
-
         </div>
-
       </div>
 
       {/* PREFERENCES */}
       <div className="bg-white/70 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-sm space-y-6">
-
-        <h2 className="text-lg font-semibold text-gray-800">
-          Preferences
-        </h2>
+        <h2 className="text-lg font-semibold text-gray-800">Preferences</h2>
 
         {/* NOTIFICATIONS */}
         <div className="flex items-center justify-between">
@@ -117,26 +103,20 @@ const Settings = () => {
             />
           </button>
         </div>
-
       </div>
 
       {/* DANGER ZONE */}
       <div className="bg-white/70 backdrop-blur-xl border border-red-100 rounded-2xl p-6 shadow-sm">
-
-        <h2 className="text-lg font-semibold text-red-600">
-          Danger Zone
-        </h2>
+        <h2 className="text-lg font-semibold text-red-600">Danger Zone</h2>
 
         <p className="text-sm text-gray-500 mt-2">
-          Clear all job data permanently
+          Clear all job data permanently!
         </p>
 
         <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded-2xl hover:bg-red-600 transition">
           Reset Data
         </button>
-
       </div>
-
     </div>
   );
 };
