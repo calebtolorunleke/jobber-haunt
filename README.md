@@ -1,16 +1,109 @@
-# React + Vite
+🚀 JobberHaunt — Modern Job Tracking SaaS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Stripe-level job application tracking system built for clarity, momentum, and execution.
 
-Currently, two official plugins are available:
+A production-style SaaS dashboard that helps developers and professionals track job applications, visualize progress, and optimize their job search pipeline with real-time insights.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with a strong focus on UI engineering, state architecture, and product-grade frontend design.
 
-## React Compiler
+✨ Live Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧠 Why this project exists
+
+Job hunting is messy.
+
+Most people lose track of:
+
+applications they’ve sent
+interview stages
+follow-ups
+outcomes
+
+JobberHaunt solves this with structure, visibility, and momentum.
+
+⚙️ Tech Stack
+⚛️ React (Vite)
+🎨 Tailwind CSS
+🎞 Framer Motion
+🧠 React Context API (state management)
+💾 LocalStorage persistence
+📊 Custom analytics logic (no external backend required)
+🧩 Core Features
+📊 Dashboard Intelligence
+Real-time KPI tracking (Applied / Interview / Offer / Rejected)
+Insight cards with derived metrics
+Recent applications overview
+
+
+💼 Job Pipeline System
+Add / update / delete applications
+Status-based filtering system
+Persistent local storage sync
+
+📈 Analytics Engine
+Conversion funnel visualization
+Application breakdown by stage
+Smart percentage calculations
+
+🎯 Modern UI/UX
+Stripe-inspired layout system
+Glassmorphism cards
+Responsive mobile-first design
+Smooth animations with Framer Motion
+
+🔍 Smart Filtering
+Filter by job status instantly
+Real-time list updates
+Zero backend required
+<img width="1445" height="1290" alt="Image 2026-05-21 at 1 52 PM" src="https://github.com/user-attachments/assets/abc5aa3f-ed53-406f-8abf-3999b8d5d79c" />
+
+ 
+🧠 State Management Flow
+Global state handled via JobContext
+Derived analytics computed dynamically
+Persistent storage via localStorage
+Custom hook abstraction: useJobs()
+
+🎨 UI Philosophy
+
+This project follows a SaaS-first design system inspired by:
+
+Stripe (layout + spacing + polish)
+Linear (simplicity + hierarchy)
+Notion (flexible components)
+
+Key principles:
+
+Less clutter, more clarity
+Soft shadows + glass surfaces
+Motion used with intent, not noise
+📸 Screenshots
+
+Add screenshots here for maximum recruiter impact
+
+Landing Page
+Dashboard View
+Jobs Pipeline
+Analytics Page
+
+🚀 Getting Started
+git clone https://github.com/calebtolorunleke/jobber-haunt
+cd jobberhaunt
+npm install
+npm run dev
+
+📦 Build for Production
+npm run build
+
+🔮 Future Improvements
+Backend integration (Node / Express / Firebase)
+Authentication system (JWT / OAuth)
+Real-time sync across devices
+Advanced analytics (charts with Recharts)
+AI-powered job suggestions
+
+👨‍💻 Author
+
+Built by Caleb Adebayo
